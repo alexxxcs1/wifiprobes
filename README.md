@@ -6,3 +6,5 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 该项目使用 Angular 6.1.5 [Angular CLI](https://github.com/angular/angular-cli) 构建 
 
+用于学习Angular以及Typescript练手的作品。
+
