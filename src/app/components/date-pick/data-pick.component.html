@@ -1,0 +1,30 @@
+<div class="date_pick_box" tabindex="-1"  (blur)="onBlurSubmit()" id="outbox">
+  <div class="start_date" [ngClass]="{'actselect':SelectType == 1}" (click)="toggleSelectTypeFun(1)">
+    {{formatDate(onInitDate,'yyyy年MM月dd日')}}
+  </div>
+  <div style="margin: 0 10px">至</div>
+  <div class="end_date" [ngClass]="{'actselect':SelectType == 0}" (click)="toggleSelectTypeFun(0)">
+    {{formatDate(onInitEndDate,'yyyy年MM月dd日')}}
+  </div>
+  <div class="drop_box" [ngClass]="{'drop_box_on_top': !DropOnBottom,'drop_box_on_bottom':DropOnBottom}" >
+    <div class="NowYearMonth">
+      <div class="iconselectMonth iconleft" (click)="MonthHandle(-1)">
+
+      </div>
+      <div class="YMvalue">
+        {{formatDate(NowYearMonth,'yyyy年MM月')}}
+      </div>
+      <div class="iconselectMonth iconright" (click)="MonthHandle(1)">
+
+      </div>
+    </div>
+    <div class="day_box week_day" *ngFor="let in of [].constructor(7);let i = index">周{{CN[i]}}</div>
+    <div (click)="selectDay(beforeDate,beforeMonthDay[i].day)" class="day_box before" [ngClass]="{'nowday':item.time >= onInitDate.getTime() && (item.time <= onInitEndDate.getTime())}"
+      *ngFor="let item of beforeMonthDay;let i = index">{{item.day}}</div>
+    <div (click)="selectDay(nowDate,nowMonthDay[i].day)" class="day_box nowMonth" [ngClass]="{'nowday':item.time >= onInitDate.getTime() && (item.time <= onInitEndDate.getTime())}"
+      *ngFor="let item of nowMonthDay;let i = index">{{item.day}}</div>
+    <div (click)="selectDay(afterDate,afterMonthDay[i].day)" class="day_box after" [ngClass]="{'nowday':item.time >= onInitDate.getTime() && (item.time <= onInitEndDate.getTime())}"
+      *ngFor="let item of afterMonthDay;let i = index">{{item.day}}</div>
+    <!-- <div class="day_box" *ngFor="let in of [].constructor(42);let i = index">{{i}}</div> -->
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="route_banner">
+  <div class="banner_min_box" >
+
+    <div class="region_select" tabindex="0" id="selectbox">
+      <div class="region_selected" >
+        <div class="selected_value">
+
+            {{regionObject[rid]}}
+
+        </div>
+        <div class="icon_box">
+
+            <div class="dropicon"></div>
+
+        </div>
+        
+      </div>
+      <div class="region_dropbox">
+        <div class="region_option" (click)="changeRoute(item.key)"  *ngFor="let item of regionObject | keyvalue"
+          [class.act_option]="item.key == rid">
+          {{ item.value }}
+        </div>
+      </div>
+    </div>
+    <div class="banner_nav_group" >
+      <!-- <div class="nav_button" *ngFor="let item of nav" [class.act_nav]="item.route == selectNav">{{item.name}}</div> -->
+      <div routerLink="/home/device/trend/{{rid}}" class="nav_button" [class.act_nav]="routepath == 'trend/:rid'">流量趋势</div>
+      <div routerLink="/home/device/thermal/{{rid}}" class="nav_button" [class.act_nav]="routepath == 'thermal/:rid'">区域热力图</div>
+      <div routerLink="/home/device/datastring/{{rid}}" class="nav_button" [class.act_nav]="routepath == 'datastring/:rid'">数据总览</div>
+    </div>
+  </div>
+</div>

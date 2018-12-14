@@ -1,0 +1,17 @@
+<div class="base-box">
+    <div class="title_row">
+      <div>
+        <span class="title_value">设备单日人流量统计</span>
+      </div>
+      <div style="color:rgba(0, 0, 0, 0.4);font-size: 14px">
+        选择日期
+        <app-data-pick class="select_box" [startdate]="TimeRange[0]" [enddate]="TimeRange[1]" (onValueUpdate)="upDateDatePick($event)"></app-data-pick>
+      </div>
+      <div style="color:rgba(0, 0, 0, 0.4);font-size: 14px">
+        <app-select-option class="select_box" style="width:128px" [Options]="MockDevicedata" (onValueUpdate)="upDateDeviceValue($event)"></app-select-option>
+      </div>
+    </div>
+    <app-echarts-box class="svg_table" [EcharetsOption]="Mockdata"></app-echarts-box>
+    <!-- <app-histogram class="svg_table" [data]="Mockdata" [color]="'#EAD093'"></app-histogram> -->
+  </div>
+  

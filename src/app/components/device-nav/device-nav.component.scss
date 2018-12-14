@@ -1,0 +1,147 @@
+.route_banner {
+  width: 100%;
+  height: 72px;
+  background: #fff;
+  box-shadow: rgba($color: #000000, $alpha: .2) 0 2px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  .banner_min_box {
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    // background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .region_select {
+      flex-shrink: 0;
+      width: 242px;
+      //   height: 40px;
+      background: #fff;
+      border-radius: 6px;
+      box-shadow: #EBEBEB 0 0 0 1px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      outline: none;
+
+
+      .region_selected {
+        flex-shrink: 0;
+        width: 242px;
+        height: 40px;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        .selected_value{
+            flex-grow: 1;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .icon_box{
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .dropicon{
+            width: 0px;
+            height: 0px;
+            border-top: rgba($color: #000000, $alpha: 0.9) 7px solid;
+            border-left: transparent 6px solid;
+            border-right: transparent 6px solid;
+            // border-bottom: rgba($color: #000000, $alpha: 0.9) 7px solid;
+        }
+      }
+
+      .region_dropbox {
+        display: none;
+      }
+
+      &:focus {
+
+        .region_dropbox {
+          z-index: 1;
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          width: 100%;
+          max-height: 200px;
+          overflow: auto;
+          bottom: 0;
+          transform: translateY(102%);
+          background: #fff;
+          box-shadow: rgba($color: #000000, $alpha: 0.16) 0 5px 20px;
+          animation: slideOut 0.5s forwards;
+
+          .region_option {
+            width: 100%;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            //   background: #00B546;
+            &:hover{
+                background: rgba($color: #00B546, $alpha: 0.05);
+            }
+          }
+
+          .act_option {
+            background: rgba($color: #00B546, $alpha: 0.1);
+          }
+        }
+      }
+
+
+
+      @keyframes slideOut {
+        from {
+          opacity: 0;
+          transform: translateY(60%);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(100%);
+        }
+      }
+    }
+
+    .banner_nav_group {
+      flex-grow: 1;
+      height: 100%;
+      // background: #999;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      .nav_button {
+        height: 100%;
+        padding: 0 7px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 20px;
+        outline: none;
+        cursor: pointer;
+      }
+
+      .act_nav {
+        box-shadow: #00B546 0 -5px 0 inset;
+      }
+    }
+  }
+}

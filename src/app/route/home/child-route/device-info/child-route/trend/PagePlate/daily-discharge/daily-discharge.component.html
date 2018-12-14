@@ -1,0 +1,15 @@
+<div class="new_old_day base_box" id="OnedayTS">
+  <div class="total_title_row">
+    <div>
+      <span class="title_value">新老用户单日人流量统计</span>
+    </div>
+    <div style="color:rgba(0, 0, 0, 0.4);font-size: 14px">
+      选择日期
+      <app-data-pick class="date_select_box" [startdate]="TimeRange[0]" [enddate]="TimeRange[1]"
+        (onValueUpdate)="upDateDatePick($event)"></app-data-pick>
+    </div>
+  </div>
+  <app-echarts-box class="svg_table" [EcharetsOption]="Mockdata"></app-echarts-box>
+
+  <!-- <app-histogram class="svg_table" [data]="Mockdata" [linedata]="MockCustomerType"></app-histogram> -->
+</div>

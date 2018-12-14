@@ -1,0 +1,53 @@
+.top_banner_box {
+  width: 100%;
+  height: 81px;
+  background: rgba($color: #00B546, $alpha: .1);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .banner_min_box {
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .banner_section_box {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      color: #00B546;
+      font-size: 21px;
+      .logo {
+        width: 33px;
+        margin: 10px;
+      }
+    }
+
+    .banner_section_box:nth-child(1) {
+      // background: #333;
+      justify-content: flex-start;
+      span{
+          margin-left: 30px;
+      }
+    }
+
+    .banner_section_box:nth-child(2) {
+      // background: #333;
+      justify-content: flex-end;
+      span{
+        margin-left: 23px;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+      .exit{
+        color: rgba($color: #000000, $alpha: .3);
+        
+      }
+    }
+  }
+
+}

@@ -1,0 +1,11 @@
+<div class="select_box" tabindex="-1" (blur)="blurSubmit()">
+  <div class="select_value">
+      <input type="text" value="{{Options[selectedIndex].value}}" readonly>
+      <div class="selecticon"></div>
+  </div>
+  <div class="drop_box">
+    <div class="option_box" [ngClass]="{'actoption': i == selectedIndex}" *ngFor="let item of Options; let i = index" (click)="selectOption(i)">
+      <input type="text" value="{{item.value}}" readonly>
+    </div>
+  </div>
+</div>

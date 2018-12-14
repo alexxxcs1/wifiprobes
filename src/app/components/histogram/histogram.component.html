@@ -1,0 +1,9 @@
+<svg id="svg-body" width="100%" height="100%">
+
+</svg>
+
+<div class="hover_box" *ngIf="hoverdata!=null" [ngClass]="{'hoveract': hoverdata!=null}" [ngStyle]="{'left': hoverdata_x + 'px','top':hoverdata_y + 'px' }">
+
+    {{hoverdata.value}}
+
+</div>

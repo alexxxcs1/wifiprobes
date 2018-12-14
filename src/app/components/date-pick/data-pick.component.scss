@@ -1,0 +1,198 @@
+.date_pick_box {
+  width: 100%;
+  min-width: 276px;
+  height: 100%;
+  min-height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  outline: none;
+
+  .actselect {
+    background: var(--actcolor);
+
+  }
+
+  .start_date {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.2s;
+    border-radius: 0 0 7px 7px;
+
+  }
+
+  .end_date {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.2s;
+    border-radius: 0 0 7px 7px;
+  }
+
+  &:focus {
+    .drop_box {
+      display: flex;
+    }
+    .start_date,
+    .end_date {
+      --actcolor: #99e1b5
+    }
+  }
+
+  .drop_box_on_bottom {
+    animation: slideoutonbottom 0.5s forwards;
+    bottom: 0px;
+    transform: translateY(100%);
+    box-shadow: rgba($color: #000000, $alpha: 0.16) 0 2px 10px;
+  }
+  .drop_box_on_top {
+    animation: slideoutontop 0.5s forwards;
+    top: 0px;
+    transform: translateY(-100%);
+    box-shadow: rgba($color: #000000, $alpha: 0.16) 0 -2px 10px;
+  }
+
+  .drop_box {
+    display: none;
+    width: 100%;
+    // height: 300px;
+    background: rgba($color: #fff, $alpha: 0.9);
+    
+    position: absolute;
+    
+    z-index: 99;
+
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+
+.NowYearMonth {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .YMvalue {
+    flex-grow: 1;
+    display: flex;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .iconselectMonth {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    // background: #000;
+    cursor: pointer;
+  }
+
+  .iconleft {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 0px;
+      height: 0px;
+      border-right: rgba($color: #00B546, $alpha: 0.4) 10px solid;
+      border-top: transparent 5px solid;
+      border-bottom: transparent 5px solid;
+      border-left: transparent 10px solid;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+
+  .iconright {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 0px;
+      height: 0px;
+      border-left: rgba($color: #00B546, $alpha: 0.4) 10px solid;
+      border-top: transparent 5px solid;
+      border-bottom: transparent 5px solid;
+      border-right: transparent 10px solid;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+}
+
+.day_box {
+  width: calc(100% / 7 - 0px);
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #000000;
+  user-select: none;
+
+  &:hover {
+    background: rgba($color: #00B546, $alpha: 0.05);
+  }
+}
+
+.week_day {
+  font-size: 14px;
+}
+
+.nowday {
+  background: rgba($color: #00B546, $alpha: 0.4);
+
+  &:hover {
+    background: rgba($color: #00B546, $alpha: 0.4);
+  }
+}
+
+.before {
+  color: rgba($color: #000000, $alpha: 0.5)
+}
+
+.nowMonth {
+  font-weight: bold;
+}
+
+.after {
+  color: rgba($color: #000000, $alpha: 0.5)
+}
+
+@keyframes slideoutontop {
+  0% {
+    top: 100%;
+    opacity: 0;
+  }
+
+  100% {
+    top: 0%;
+    opacity: 1;
+  }
+}
+
+@keyframes slideoutonbottom {
+  0% {
+    bottom: 100%;
+    opacity: 0;
+  }
+
+  100% {
+    bottom: 0%;
+    opacity: 1;
+  }
+}

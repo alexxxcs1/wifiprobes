@@ -1,0 +1,72 @@
+.base-box {
+  background: #fff;
+  margin-top: 53px;
+  width: 1200px;
+  height: 676px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  .title_row {
+    width: 100%;
+    height: 40px;
+    flex-shrink: 0;
+    margin-top: 47px;
+    // background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & div:nth-child(1) {
+      flex-grow: 1;
+      height: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    & div:nth-child(2) {
+      flex-shrink: 0;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 30px;
+
+    }
+    & div:nth-child(3) {
+        flex-shrink: 0;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 30px;
+      }
+
+    .title_value {
+      font-size: 21px;
+      margin-left: 50px;
+      font-weight: bold;
+    }
+
+    .title_subhead {
+      margin-left: 35px;
+      font-size: 16px;
+      // font-weight: lighter;
+      color: rgba($color: #000000, $alpha: 0.78);
+    }
+  }
+  .svg_table{
+      width: 100%;
+      height: calc(100% - 87px);
+  }
+}
+.select_box {
+    width: 276px;
+    height: 36px;
+    //   background: #333;
+    margin-left: 14px;
+    box-shadow: #E5E5E5 0 0 0 1px inset;
+    border-radius: 6px;
+  }
