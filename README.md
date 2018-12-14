@@ -4,5 +4,5 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 # Wifiprobes
 
-该项目使用 Angular 6.1.5 构建 [Angular CLI](https://github.com/angular/angular-cli)
+该项目使用 Angular 6.1.5 [Angular CLI](https://github.com/angular/angular-cli) 构建 
 
