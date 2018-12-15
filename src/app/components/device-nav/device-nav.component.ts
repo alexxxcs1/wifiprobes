@@ -7,9 +7,8 @@ import { ActivatedRoute,Router } from "@angular/router";
   styleUrls: ["./device-nav.component.scss"]
 })
 export class DeviceNavComponent implements OnInit {
-  rid:String
-  routepath:String
-  regionlist:Array<Object>
+  rid:string
+  routepath:string
   regionObject:Object
   constructor(private actroute: ActivatedRoute,private route:Router,private element: ElementRef) {
     
@@ -31,21 +30,6 @@ export class DeviceNavComponent implements OnInit {
       2:'国家会展中心（上海）',
       3:'北京首都博览中心'
     }
-    
-    this.regionlist = [
-      {
-        id:1,
-        name:'上海新博览国际会展中心'
-      },
-      {
-        id:2,
-        name:'国家会展中心（上海）'
-      },
-      {
-        id:3,
-        name:'北京首都博览中心'
-      }
-    ]
   }
   changeRoute(id): void {
     let path = this.actroute.snapshot.url[0].path

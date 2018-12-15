@@ -1,0 +1,44 @@
+.route_banner {
+    width: 100%;
+    height: 72px;
+    background: #fff;
+    box-shadow: rgba($color: #000000, $alpha: .2) 0 2px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  
+    .banner_min_box {
+      width: 100%;
+      max-width: 1200px;
+      height: 100%;
+      // background: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .banner_nav_group {
+        flex-grow: 1;
+        height: 100%;
+        // background: #999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+  
+        .nav_button {
+          height: 100%;
+          padding: 0 7px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0 20px;
+          outline: none;
+          cursor: pointer;
+        }
+  
+        .act_nav {
+          box-shadow: #00B546 0 -5px 0 inset;
+        }
+      }
+    }
+  }
+  

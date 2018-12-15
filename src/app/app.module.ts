@@ -21,6 +21,12 @@ import { DeviceDailyComponent } from './route/home/child-route/device-info/child
 import { EchartsBoxComponent } from './components/echarts-box/echarts-box.component';
 import { VisitorsFlowrateComponent } from './route/home/child-route/device-info/child-route/thermal/PagePlate/visitors-flowrate/visitors-flowrate.component';
 import { StringDataListComponent } from './route/home/child-route/device-info/child-route/datastring/PagePlate/string-data-list/string-data-list.component';
+import { UserInfoComponent } from './route/home/child-route/user-info/user-info.component';
+import { UserNavComponent } from './components/user-nav/user-nav.component';
+import { MyPlaceComponent } from './route/home/child-route/user-info/child-route/my-place/my-place.component';
+import { UserSettingComponent } from './route/home/child-route/user-info/child-route/user-setting/user-setting.component';
+import { PlaceListComponent } from './route/home/child-route/user-info/child-route/my-place/PagePlate/place-list/place-list.component';
+import { PlaceInfoComponent } from './route/home/child-route/user-info/child-route/my-place/PagePlate/place-info/place-info.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +48,13 @@ import { StringDataListComponent } from './route/home/child-route/device-info/ch
     DeviceDailyComponent,
     EchartsBoxComponent,
     VisitorsFlowrateComponent,
-    StringDataListComponent
+    StringDataListComponent,
+    UserInfoComponent,
+    UserNavComponent,
+    MyPlaceComponent,
+    UserSettingComponent,
+    PlaceListComponent,
+    PlaceInfoComponent
   ],
   imports: [
     BrowserModule,

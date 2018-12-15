@@ -1,0 +1,9 @@
+<div class="route_banner">
+  <div class="banner_min_box" >
+    <div class="banner_nav_group" >
+      <!-- <div class="nav_button" *ngFor="let item of nav" [class.act_nav]="item.route == selectNav">{{item.name}}</div> -->
+      <div routerLink="/home/user/place" class="nav_button" [class.act_nav]="routepath == 'place'">我的场馆</div>
+      <div routerLink="/home/user/setting" class="nav_button" [class.act_nav]="routepath == 'setting'">个人设置</div>
+    </div>
+  </div>
+</div>

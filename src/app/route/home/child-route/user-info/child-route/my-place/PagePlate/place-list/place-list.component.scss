@@ -1,0 +1,56 @@
+.list_box{
+    width: 1200px;
+    // height: 464px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    .box_title{
+        width: 1108px;
+        height: 84px;
+        // background: #333;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 21px;
+    }
+    .list_detial_box{
+        width: 1144px;
+        // background: red;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: 30px;
+        .detial_box{
+            width: 250px;
+            height: 148px;
+            margin: 18px;
+            background: #F7F7F7;
+        }
+        .add_icon{
+            position: relative;
+            &::after{
+                position: absolute;
+                content: '';
+                width: 61px;
+                height: 10px;
+                background: rgba($color: #00B546, $alpha: 0.31);
+                left: 50%;
+                top:50%;
+                transform: translateX(-50%) translateY(-50%);              
+            }
+            &::before{
+                position: absolute;
+                content: '';
+                width: 61px;
+                height: 10px;
+                background: rgba($color: #00B546, $alpha: 0.31);
+                left: 50%;
+                top:50%;
+                transform: translateX(-50%) translateY(-50%) rotate(90deg);
+            }
+        }
+    }
+}
