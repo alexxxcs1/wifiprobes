@@ -1,10 +1,20 @@
 <div class="list_box">
 
-    <div class="box_title">
-      我的场馆
+  <div class="box_title">
+    我的场馆
+  </div>
+  <div class="list_detial_box">
+    <div class="detial_box" *ngFor="let item of mocklistdata">
+      <div class="detial_infobox">
+        <div class="place_name" >{{item.placeName}} <span class="graytext" style="text-decoration:underline" routerLink="/home/user/place/info/{{item.id}}">修改</span></div>
+        <div class="place_devicenum">设备数量 <span class="graytext" style="text-decoration:underline">{{item.deviceNumber}}个</span></div>
+        <div class="handle_group">
+          <div class="delete_button">
+            删除
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="list_detial_box">
-      <div class="detial_box"></div>
-      <div class="detial_box add_icon"></div>
-    </div>
+    <div class="detial_box add_icon"></div>
+  </div>
 </div>

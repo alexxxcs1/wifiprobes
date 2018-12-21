@@ -14,6 +14,7 @@
         justify-content: flex-start;
         align-items: center;
         font-size: 21px;
+        font-weight: bold;
     }
     .list_detial_box{
         width: 1144px;
@@ -28,6 +29,36 @@
             height: 148px;
             margin: 18px;
             background: #F7F7F7;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .detial_infobox{
+                width: calc(100% - 44px);
+                .graytext{
+                    color: rgba($color: #000000, $alpha: 0.7);
+                    cursor: pointer;
+                }
+                .place_name{
+                    margin-top: 10px;
+                    margin-bottom: 24px;
+                }
+                .place_devicenum{
+                    margin-bottom: 10px;
+                }
+                .handle_group{
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    color: rgba($color: #000000, $alpha: 0.2);
+                    .delete_button{
+                        cursor: pointer;
+                    }
+                }
+            }
+            
+            
         }
         .add_icon{
             position: relative;

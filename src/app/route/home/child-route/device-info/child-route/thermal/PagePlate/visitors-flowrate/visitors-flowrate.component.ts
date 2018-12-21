@@ -120,18 +120,24 @@ export class VisitorsFlowrateComponent implements OnInit {
       ]
     };
     if (!this.DeviceFilter) {
+      let valueArray:Array<number> = [];
+      let valueCount = 0;
       for (let z = 1; z < this.MockDevicedata.length; z++) {
-        (this.Mockdata as any).xAxis[0].data.push(this.MockDevicedata[z]);
+        valueArray.push(Math.round(Math.random() * 2500));
+        valueCount =valueCount + valueArray[z-1];
+      }
+      for (let x = 0; x < valueArray.length; x++) {
+        (this.Mockdata as any).xAxis[0].data.push(this.MockDevicedata[x]);
         (this.Mockdata as any).series[0].data.push({
-          value:Math.random() * 2500,
+          value:valueArray[x],
           itemStyle:{
             color:'#FF7272',
-            opacity:Math.random() + 0.5,
+            opacity:valueArray[x] / valueCount,
           }
         });
       }
     }else{
-        (this.Mockdata as any).xAxis[0].data.push(this.MockDevicedata[this.DeviceFilter]);
+        (this.Mockdata as any).xAxis[0].data.push(this.MockDevicedata[this.DeviceFilter-1]);
         (this.Mockdata as any).series[0].data.push({
           value:Math.random() * 2500,
           itemStyle:{

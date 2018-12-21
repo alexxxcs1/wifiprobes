@@ -10,6 +10,7 @@ import { UserInfoComponent } from "@route/home/child-route/user-info/user-info.c
 import { MyPlaceComponent } from "@route/home/child-route/user-info/child-route/my-place/my-place.component";
 import { PlaceListComponent } from '@route/home/child-route/user-info/child-route/my-place/PagePlate/place-list/place-list.component';
 import { PlaceInfoComponent } from '@route/home/child-route/user-info/child-route/my-place/PagePlate/place-info/place-info.component';
+import { PlaceDeviceComponent } from '@route/home/child-route/user-info/child-route/my-place/PagePlate/place-device/place-device.component';
 import { UserSettingComponent } from '@route/home/child-route/user-info/child-route/user-setting/user-setting.component';
 
 
@@ -23,7 +24,7 @@ const routes = [
     path:'home',
     component:HomeComponent,
     children:[
-      { path: '', component : DeviceInfoComponent },
+      { path: '', redirectTo: 'device/trend/unselect', pathMatch: 'full'},
       { path: 'device', redirectTo: 'device/trend/unselect', pathMatch: 'full'},
       { path: 'device', component : DeviceInfoComponent ,children:[
         { path: 'trend', redirectTo: 'trend/unselect', pathMatch: 'full'},
@@ -38,7 +39,8 @@ const routes = [
       { path: 'user', component : UserInfoComponent,children:[
         { path: 'place', component : MyPlaceComponent,children:[
           { path: '', component : PlaceListComponent},
-          { path: 'info', component : PlaceInfoComponent},
+          { path: 'info/:id', component : PlaceInfoComponent},
+          { path: 'device/:id', component : PlaceDeviceComponent},
         ]},
         { path: 'setting', component : UserSettingComponent},
       ]}

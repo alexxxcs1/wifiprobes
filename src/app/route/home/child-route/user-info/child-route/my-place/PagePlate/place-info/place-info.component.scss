@@ -1,0 +1,109 @@
+.info-box {
+  width: 1200px;
+  height: 400px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  .box_title {
+    width: 1108px;
+    height: 84px;
+    // background: #333;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 21px;
+    font-weight: bold;
+  }
+
+  .box_detial {
+    width: 1108px;
+    height: calc(100% - 84px);
+
+    .input_row {
+      width: 100%;
+      height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 21px;
+
+      .row_tittle {
+        width: 107px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-weight: bold;
+      }
+
+      .row_input_long {
+        width: 198px;
+        height: 42px;
+        box-shadow: #707070 0 0 0 1px inset;
+        border-radius: 5px;
+      }
+
+      .row_input_short {
+        width: 112px;
+        height: 42px;
+        box-shadow: #707070 0 0 0 1px inset;
+        border-radius: 5px;
+      }
+
+      .region_text {
+        margin: 0 11px;
+      }
+
+      .input_box {
+        display: block;
+        background: transparent;
+        width: 100%;
+        height: 100%;
+        outline: none;
+        font-size: 16px;
+        color: rgba($color: #000000, $alpha: 0.7);
+        text-indent: 27px;
+      }
+    }
+
+    .handle_group {
+      width: 100%;
+      height: 40px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-top: 53px;
+      .handleSave {
+        width: 120px;
+        height: 40px;
+        background: #00B546;
+        border-radius: 8px;
+        margin-right: 26px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        user-select: none;
+      }
+
+      .handleCancel {
+        width: 120px;
+        height: 40px;
+        background: #B9B9B9;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        user-select: none;
+      }
+    }
+  }
+}

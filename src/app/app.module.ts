@@ -27,6 +27,7 @@ import { MyPlaceComponent } from './route/home/child-route/user-info/child-route
 import { UserSettingComponent } from './route/home/child-route/user-info/child-route/user-setting/user-setting.component';
 import { PlaceListComponent } from './route/home/child-route/user-info/child-route/my-place/PagePlate/place-list/place-list.component';
 import { PlaceInfoComponent } from './route/home/child-route/user-info/child-route/my-place/PagePlate/place-info/place-info.component';
+import { PlaceDeviceComponent } from './route/home/child-route/user-info/child-route/my-place/PagePlate/place-device/place-device.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { PlaceInfoComponent } from './route/home/child-route/user-info/child-rou
     MyPlaceComponent,
     UserSettingComponent,
     PlaceListComponent,
-    PlaceInfoComponent
+    PlaceInfoComponent,
+    PlaceDeviceComponent
   ],
   imports: [
     BrowserModule,
