@@ -10,7 +10,7 @@ const logo = require('@assets/img/logo.png');
   styleUrls: ['./top-banner.component.scss']
 })
 export class TopBannerComponent implements OnInit {
-  logosrc=logo;
+  logosrc:string=logo;
   user:User = {
     id:18960605909,
     name:'hellworld',

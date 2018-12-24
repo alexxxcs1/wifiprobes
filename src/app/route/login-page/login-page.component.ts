@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+declare function require(string): string;
+const logo = require('@assets/img/logo.png');
 
 @Component({
   selector: 'app-login-page',
@@ -6,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login-page.component.scss']
 })
 export class LoginPageComponent implements OnInit {
-
+  logo:string = logo;
   constructor() { }
 
   ngOnInit() {
