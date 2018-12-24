@@ -28,6 +28,9 @@ import { UserSettingComponent } from './route/home/child-route/user-info/child-r
 import { PlaceListComponent } from './route/home/child-route/user-info/child-route/my-place/PagePlate/place-list/place-list.component';
 import { PlaceInfoComponent } from './route/home/child-route/user-info/child-route/my-place/PagePlate/place-info/place-info.component';
 import { PlaceDeviceComponent } from './route/home/child-route/user-info/child-route/my-place/PagePlate/place-device/place-device.component';
+import { NewDeviceComponent } from './route/home/child-route/user-info/child-route/my-place/PagePlate/place-device/components/new-device/new-device.component';
+import { DarkMaskComponent } from './components/dark-mask/dark-mask.component';
+import { UserInfoSettingComponent } from './route/home/child-route/user-info/child-route/user-setting/PagePlate/user-info-setting/user-info-setting.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +59,10 @@ import { PlaceDeviceComponent } from './route/home/child-route/user-info/child-r
     UserSettingComponent,
     PlaceListComponent,
     PlaceInfoComponent,
-    PlaceDeviceComponent
+    PlaceDeviceComponent,
+    NewDeviceComponent,
+    DarkMaskComponent,
+    UserInfoSettingComponent
   ],
   imports: [
     BrowserModule,

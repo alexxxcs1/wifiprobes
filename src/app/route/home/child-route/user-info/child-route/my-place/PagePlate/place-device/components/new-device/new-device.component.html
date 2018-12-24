@@ -1,0 +1,65 @@
+<app-dark-mask>
+  <div class="device_info">
+
+    <div class="box_title">
+      新增设备
+    </div>
+    <div class="device_detial_box">
+
+      <div class="row_base">
+
+        <div class="row_tittle">
+          设备名称
+        </div>
+        <div class="row_input">
+          <input type="text" value="{{DeviceName}}" (change)="onInputChange('DeviceName')">
+        </div>
+      </div>
+
+      <div class="row_base">
+
+        <div class="row_tittle">
+          所属场馆
+        </div>
+        <div class="row_input">
+          <input type="text" value="{{DevicePlace}}" (change)="onInputChange('DevicePlace')">
+        </div>
+      </div>
+
+      <div class="row_base">
+
+        <div class="row_tittle">
+          所属组别
+        </div>
+        <div class="row_input">
+          <input type="text" value="{{DeviceBelong}}" (change)="onInputChange('DeviceBelong')">
+        </div>
+      </div>
+
+      <div class="row_base">
+
+        <div class="row_tittle">
+          MAC地址
+        </div>
+        <div class="row_input">
+          <input type="text" value="{{DeviceMac}}"  (change)="onInputChange('DeviceMac')">
+        </div>
+      </div>
+
+      <div class="row_base">
+
+        <div class="row_tittle">
+          API地址
+        </div>
+        <div class="row_input">
+          <input type="text" value="{{DeviceApi}}" (change)="onInputChange('DeviceApi')">
+        </div>
+      </div>
+
+    </div>
+    <div class="handle_group">
+      <div class="button" style="background:#00B546" (click)="HandleDisplay()">确定</div>
+      <div class="button" style="background:#B9B9B9" (click)="HandleDisplay(false)">取消</div>
+    </div>
+  </div>
+</app-dark-mask>

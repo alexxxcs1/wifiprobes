@@ -1,3 +1,42 @@
-<p>
-  place-device works!
-</p>
+<div class="device_list">
+
+  <div class="box_title">
+    设备管理
+    <div class="device_status_tips">
+
+      <div class="status_box" style="--background:#E5F7EC"></div> 表示设备在正常工作 <div class="status_box" style="--background:#FFC7C7"></div>表示设备已经处于离线状态
+
+    </div>
+    <div class="device_handle_group">
+
+      <div class="button" style="background:#00B546" (click)="HandleDeviceInfo(true)">新的设备</div>
+
+    </div>
+  </div>
+  <div class="list_detial_box">
+
+    <div class="detial_box" [ngStyle]="{'background': item.status==0?'#FFC7C7':'#E5F7EC'}" *ngFor="let item of mockdevicedata">
+      <div class="detial_infobox">
+        <div class="device_name rowbase">
+          <div class="device_name_string">{{item.name}}</div>
+          <div class="device_status">
+            <div class="status_icon" *ngIf="item.status==1" style="--status:#00B546"></div>
+            <div class="status_icon" *ngIf="item.status==0" style="--status:#FF5C5C"></div>
+          </div>
+        </div>
+        <div class="device_mac rowbase">MAC地址：{{item.mac_url}}</div>
+        <div class="device_api rowbase"><span class="api_tips">接口地址：</span><input type="text" value="{{item.api_url}}"
+            class="device_api_input"></div>
+      </div>
+      <div class="handle_group">
+        <div class="delete_button">
+          删除
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<app-new-device *ngIf="newDeviceInfo" (handleDisplay)="HandleDeviceInfo($event)"></app-new-device>
