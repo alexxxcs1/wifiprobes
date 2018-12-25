@@ -3,32 +3,14 @@
     <div class="logo_box">
       <div class="logo">
         <img src="{{logo}}" alt="">
-        <div class="mouth"></div>
+        <!-- <div class="mouth"></div> -->
+        <div class="eye left_e" [ngClass]="{'close': passwordfocus}"></div>
+        <div class="eye right_e" [ngClass]="{'close': passwordfocus}"></div>
       </div>
     </div>
     <div class="info_detial">
-
-      <div class="login_title">欢迎回来</div>
-      <div class="input_box">
-        <div class="input_title">
-          <img src="/src/assets/img/phone.png" alt="">
-        </div>
-        <div class="input_value">
-          <input type="text" placeholder="请输入手机号码">
-        </div>
-      </div>
-      <div class="input_box">
-        <div class="input_title">
-          <img src="/src/assets/img/save.png" alt="">
-        </div>
-        <div class="input_value">
-          <input type="password" placeholder="请输入密码">
-        </div>
-      </div>
-      <div class="button">登录</div>
-      <div class="handle_group">
-        <div class="go_reg">去注册</div>
-      </div>
+      <app-login-box *ngIf="customroute=='login'" (handleRoute)="HandleCustomRoute($event)" (handleLogo)="HandleLogo($event)"></app-login-box>
+      <app-register-box *ngIf="customroute=='register'" (handleRoute)="HandleCustomRoute($event)" (handleLogo)="HandleLogo($event)"></app-register-box>
     </div>
   </div>
 </div>

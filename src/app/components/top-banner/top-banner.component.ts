@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {User} from '@class/User'
 
 declare function require(string): string;
-const logo = require('@assets/img/logo.png');
+const logo = require('@assets/logo.png');
 
 @Component({
   selector: 'app-top-banner',

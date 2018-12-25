@@ -67,9 +67,12 @@ a {
 }
 
 a:active {
-  color: #fff;
+  color: unset;
 }
 
+*{
+  outline: none;
+}
 // @font-face{
 //     font-family: 'hyjh50';
 //     src : url('./font/hyjh50j.ttf');

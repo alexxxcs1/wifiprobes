@@ -1,0 +1,57 @@
+.select_box {
+  min-width: 112px;
+  padding: 0 10px;
+  height: 42px;
+  border-radius: 5px;
+  box-shadow: rgba($color: #707070, $alpha: 0.2) 0 0 0 1px inset;
+  position: relative;
+  .selected_value {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &:focus{
+    .drop_box{
+        display: flex;
+    }
+  }
+  .drop_box {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    width: 400px;
+    padding: 20px;
+    // height: 150px;
+    background: #fff;
+    transform: translateX(-50%) translateY(-110%);
+    box-shadow: rgba($color: #707070, $alpha: 0.2) 0 0 20px 1px;
+    display: none;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    .empty_tips{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .select_option{
+        width: calc((100% / 5) - 10px);
+        margin: 0 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover{
+            background: rgba($color: #00B546, $alpha: .1);
+            cursor: pointer;
+        }
+    }
+    .act_option{
+        background: rgba($color: #00B546, $alpha: .2);
+    }
+  }
+}

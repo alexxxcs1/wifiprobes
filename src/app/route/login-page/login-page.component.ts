@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 declare function require(string): string;
-const logo = require('@assets/img/logo.png');
+const logo = require('@assets/logo.png');
 
 @Component({
   selector: 'app-login-page',
@@ -9,9 +9,16 @@ const logo = require('@assets/img/logo.png');
 })
 export class LoginPageComponent implements OnInit {
   logo:string = logo;
-  constructor() { }
-
+  customroute:string = 'login';
+  passwordfocus:boolean = false;
+  constructor() {}
   ngOnInit() {
+    
   }
-
+  HandleCustomRoute(routename){
+    this.customroute = routename;
+  }
+  HandleLogo(boolean){
+    this.passwordfocus = boolean;
+  }
 }

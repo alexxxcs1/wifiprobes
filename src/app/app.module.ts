@@ -31,6 +31,9 @@ import { PlaceDeviceComponent } from './route/home/child-route/user-info/child-r
 import { NewDeviceComponent } from './route/home/child-route/user-info/child-route/my-place/PagePlate/place-device/components/new-device/new-device.component';
 import { DarkMaskComponent } from './components/dark-mask/dark-mask.component';
 import { UserInfoSettingComponent } from './route/home/child-route/user-info/child-route/user-setting/PagePlate/user-info-setting/user-info-setting.component';
+import { LoginBoxComponent } from './route/login-page/components/login-box/login-box.component';
+import { RegisterBoxComponent } from './route/login-page/components/register-box/register-box.component';
+import { CitySelectComponent } from './components/city-select/city-select.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +65,10 @@ import { UserInfoSettingComponent } from './route/home/child-route/user-info/chi
     PlaceDeviceComponent,
     NewDeviceComponent,
     DarkMaskComponent,
-    UserInfoSettingComponent
+    UserInfoSettingComponent,
+    LoginBoxComponent,
+    RegisterBoxComponent,
+    CitySelectComponent
   ],
   imports: [
     BrowserModule,

@@ -22,6 +22,7 @@
       "@class/*": ["src/class/*"],
       "@route/*": ["src/app/route/*"],
       "@components/*": ["src/app/components/*"],
+      "@tool/*": ["src/app/common/tool/*"],
     }
   }
 }

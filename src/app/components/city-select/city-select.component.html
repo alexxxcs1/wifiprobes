@@ -1,0 +1,15 @@
+<div class="select_box" tabindex="-1">
+  <div class="selected_value">
+    {{selected?selected:'选择一个选项'}}
+  </div>
+  <div class="drop_box" *ngIf="data.length">
+    <div  *ngFor="let item of data" class="select_option" (click)="handleSelect(item)" [ngClass]="{'act_option': item==selected}">
+      {{item}}
+    </div>
+  </div>
+  <div class="drop_box" *ngIf="!data.length">
+    <div class="empty_tips">
+      请先选择上一级
+    </div>
+  </div>
+</div>

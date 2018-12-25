@@ -33,7 +33,27 @@
         img {
           filter: brightness(10000%);
         }
-
+        .eye{
+          width: 15px;
+          height: 15px;
+          background: #869f65;
+          border-radius: 15px;
+          position: absolute;
+          top: 60%;
+          left: 50%;
+          transform: translateX(-50%) translateY(-50%);
+          transition: width,height 0.3s,0.3s;
+        }
+        .left_e{
+          left: 35%;
+        }
+        .right_e{
+          left: 65%;
+        }
+        .close{
+          width: 20px;
+          height: 5px;
+        }
         .mouth {
           position: absolute;
           top: 55%;
@@ -73,80 +93,6 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-
-      .login_title {
-        width: 358px;
-        height: 60px;
-        font-size: 26px;
-        font-weight: 400;
-        line-height: 44px;
-        color: rgba(0, 181, 70, 1);
-      }
-
-      .input_box {
-        width: 358px;
-        height: 54px;
-        box-shadow: rgba(196, 196, 196, 1) 0 0 0 1px inset;
-        border-radius: 6px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 12px 0;
-        .input_title {
-          width: 54px;
-          height: 54px;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          flex-shrink: 0;
-
-          img {
-            width: 21px;
-            // height: 50px;
-          }
-        }
-
-        .input_value {
-          flex-grow: 1;
-          width: 100%;
-          height: 100%;
-          input{
-              display: block;
-              width: 100%;
-              height: 100%;
-              background: transparent;
-              font-size:14px;
-          }
-        }
-      }
-      .button{
-        width:358px;
-        height:54px;
-        background:rgba(0,181,70,1);
-        border-radius:6px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 18px;
-        color: #fff;
-        cursor: pointer;
-      }
-      .handle_group{
-          width: 358px;
-          display: flex;
-          justify-content: flex-end;
-          align-items: center;
-          margin: 10px 0px;
-          .go_reg{
-            font-size:14px;
-            font-weight:300;
-            line-height:24px;
-            color:rgba(112,112,112,1);
-            text-decoration:underline;
-            cursor: pointer;
-          }
-      }
     }
   }
 }
